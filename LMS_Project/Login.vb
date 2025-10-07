@@ -21,42 +21,9 @@ Public Class login
         ' Set focus to username textbox
         username_box.Focus()
 
-        ' Initialize toggle button
-        InitializeToggleButton()
     End Sub
 
-    Private Sub InitializeToggleButton()
-        ' Set initial state of toggle button
-        btnTogglePassword.Text = "👁"
-        btnTogglePassword.FlatStyle = FlatStyle.Flat
-        btnTogglePassword.FlatAppearance.BorderSize = 1
-        btnTogglePassword.BackColor = Color.LightGray
-        btnTogglePassword.Cursor = Cursors.Hand
 
-        ' Add tooltip for better user experience
-        Dim toolTip As New ToolTip()
-        toolTip.SetToolTip(btnTogglePassword, "Click to show/hide password")
-    End Sub
-
-    Private Sub btnTogglePassword_Click(sender As Object, e As EventArgs) Handles btnTogglePassword.Click
-        TogglePasswordVisibility()
-    End Sub
-
-    Private Sub TogglePasswordVisibility()
-        If isPasswordVisible Then
-            ' Hide password
-            password_box.PasswordChar = "*"c
-            btnTogglePassword.Text = "👁"
-            btnTogglePassword.BackColor = Color.LightGray
-            isPasswordVisible = False
-        Else
-            ' Show password
-            password_box.PasswordChar = Nothing
-            btnTogglePassword.Text = "🙈"
-            btnTogglePassword.BackColor = Color.LightBlue
-            isPasswordVisible = True
-        End If
-    End Sub
 
     Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles username_box.TextChanged
 
@@ -129,11 +96,6 @@ Public Class login
                             username_box.Clear()
                             password_box.Clear()
 
-                            ' Reset password visibility to hidden state
-                            If isPasswordVisible Then
-                                TogglePasswordVisibility()
-                            End If
-
                             ' Redirect based on role
                             RedirectToUserDashboard()
 
@@ -142,11 +104,6 @@ Public Class login
                             ' Clear password field for security
                             password_box.Clear()
                             password_box.Focus()
-
-                            ' Reset password visibility to hidden state for security
-                            If isPasswordVisible Then
-                                TogglePasswordVisibility()
-                            End If
                         End If
                     End Using
                 End Using
@@ -187,7 +144,7 @@ Public Class login
 
                         ' Hide login form and show Teacher form
                         Me.Hide()
-                        Dim teacherForm As New Teacher()
+                        Dim teacherForm As New TeacherDashboard()
                         teacherForm.Show()
 
                     Catch ex As Exception
@@ -203,7 +160,7 @@ Public Class login
 
                         ' Hide login form and show Student form
                         Me.Hide()
-                        Dim studentForm As New Student()
+                        Dim studentForm As New StudentDashboard()
                         studentForm.Show()
 
                     Catch ex As Exception
@@ -247,5 +204,9 @@ Public Class login
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then
             password_box.Focus()
         End If
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
+
     End Sub
 End Class

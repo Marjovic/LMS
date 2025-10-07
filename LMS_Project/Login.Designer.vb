@@ -28,88 +28,80 @@ Partial Class login
         password_box = New TextBox()
         Label3 = New Label()
         login_button = New Button()
-        btnTogglePassword = New Button()
         SuspendLayout()
         ' 
         ' username_box
         ' 
-        username_box.Location = New Point(75, 143)
+        username_box.Location = New Point(75, 208)
+        username_box.Margin = New Padding(4, 3, 4, 3)
         username_box.Name = "username_box"
-        username_box.Size = New Size(289, 29)
+        username_box.Size = New Size(487, 32)
         username_box.TabIndex = 0
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(75, 119)
+        Label1.Location = New Point(75, 182)
+        Label1.Margin = New Padding(4, 0, 4, 0)
         Label1.Name = "Label1"
-        Label1.Size = New Size(84, 21)
+        Label1.Size = New Size(93, 23)
         Label1.TabIndex = 1
         Label1.Text = "Username"
         ' 
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(75, 215)
+        Label2.Location = New Point(75, 305)
+        Label2.Margin = New Padding(4, 0, 4, 0)
         Label2.Name = "Label2"
-        Label2.Size = New Size(84, 21)
+        Label2.Size = New Size(90, 23)
         Label2.TabIndex = 2
         Label2.Text = "Password"
         ' 
         ' password_box
         ' 
-        password_box.Location = New Point(75, 239)
+        password_box.Location = New Point(75, 331)
+        password_box.Margin = New Padding(4, 3, 4, 3)
         password_box.Name = "password_box"
-        password_box.Size = New Size(289, 29)
+        password_box.Size = New Size(487, 32)
         password_box.TabIndex = 3
         ' 
         ' Label3
         ' 
         Label3.AutoSize = True
-        Label3.Font = New Font("Times New Roman", 18.0F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Label3.Location = New Point(75, 60)
+        Label3.Font = New Font("Times New Roman", 18F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label3.Location = New Point(59, 94)
+        Label3.Margin = New Padding(4, 0, 4, 0)
         Label3.Name = "Label3"
-        Label3.Size = New Size(289, 27)
+        Label3.Size = New Size(289, 54)
         Label3.TabIndex = 4
-        Label3.Text = "Please enter your credentials"
+        Label3.Text = "Please enter your credentials" & vbCrLf & vbCrLf
         ' 
         ' login_button
         ' 
-        login_button.Location = New Point(271, 326)
+        login_button.Font = New Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        login_button.Location = New Point(429, 442)
+        login_button.Margin = New Padding(4, 3, 4, 3)
         login_button.Name = "login_button"
-        login_button.Size = New Size(93, 29)
+        login_button.Size = New Size(133, 32)
         login_button.TabIndex = 5
         login_button.Text = "Login"
         login_button.UseVisualStyleBackColor = True
         ' 
-        ' btnTogglePassword
-        ' 
-        btnTogglePassword.BackColor = SystemColors.Window
-        btnTogglePassword.FlatStyle = FlatStyle.Flat
-        btnTogglePassword.Font = New Font("Times New Roman", 10.0F, FontStyle.Bold)
-        btnTogglePassword.ForeColor = SystemColors.WindowText
-        btnTogglePassword.Location = New Point(370, 239)
-        btnTogglePassword.Name = "btnTogglePassword"
-        btnTogglePassword.Size = New Size(35, 29)
-        btnTogglePassword.TabIndex = 6
-        btnTogglePassword.Text = "👁"
-        btnTogglePassword.UseVisualStyleBackColor = False
-        ' 
         ' login
         ' 
-        AutoScaleDimensions = New SizeF(10.0F, 21.0F)
+        AutoScaleDimensions = New SizeF(12F, 23F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(1143, 630)
-        Controls.Add(btnTogglePassword)
+        ClientSize = New Size(1372, 690)
         Controls.Add(login_button)
         Controls.Add(Label3)
         Controls.Add(password_box)
         Controls.Add(Label2)
         Controls.Add(Label1)
         Controls.Add(username_box)
-        Font = New Font("Times New Roman", 14.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = SystemColors.Desktop
-        Margin = New Padding(4)
+        Margin = New Padding(5, 4, 5, 4)
         Name = "login"
         Text = "MGOD LMS"
         ResumeLayout(False)
@@ -122,6 +114,5 @@ Partial Class login
     Friend WithEvents password_box As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents login_button As Button
-    Friend WithEvents btnTogglePassword As Button
 
 End Class

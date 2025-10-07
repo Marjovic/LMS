@@ -117,25 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblInstructorInstructions.Text" xml:space="preserve">
-    <value>Instructions:
-1. Fill in all required fields
-2. A default password 'temp123' will be assigned
-3. Instructor will be advised to change password on first login
-4. User account will be created first, then instructor profile</value>
-  </data>
-  <data name="lblStudentInstructions.Text" xml:space="preserve">
-    <value>Instructions:
-1. Fill in all required fields
-2. A default password 'temp123' will be assigned
-3. Student will be advised to change password on first login
-4. User account will be created first, then student profile</value>
-  </data>
-  <data name="lblSecurityNotice.Text" xml:space="preserve">
-    <value>Security Notice:
-• Passwords are hashed using SHA2-256
-• Users should be advised to change their password
-• Use the generate button for secure passwords
-• All password resets are logged for security</value>
-  </data>
 </root>
